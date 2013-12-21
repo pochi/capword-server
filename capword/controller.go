@@ -22,7 +22,6 @@ func init() {
 }
 
 func index(response http.ResponseWriter, request *http.Request) {
-  response.Header().Set("Content-Type", "application/json")
   context := appengine.NewContext(request)
   key := datastore.NewKey(context, "Words", "default_words", 0, nil)
   query := datastore.NewQuery("Words").Ancestor(key).Order("Name").Limit(10)
@@ -33,7 +32,7 @@ func index(response http.ResponseWriter, request *http.Request) {
   }
 
   response_words := Words{Elements: words}
-
+  response.Header().Set("Content-Type", "application/json")
   encoder := json.NewEncoder(response)
   encoder.Encode(response_words)
 }
