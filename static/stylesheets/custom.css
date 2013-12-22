@@ -9,12 +9,15 @@ body {
     width: 150px;
     background: #fff;
     height: 50px;
+    line-height: 50px;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
     background-image: url(../images/fabric.png);
     list-style: none;
     margin-bottom: 30px;
+    margin-left: 30px;
+    vertical-align: middle;
 
     -webkit-transform-origin: 25% 90%;
     -moz-transform-origin: 25% 90%;
@@ -32,7 +35,8 @@ body {
     box-shadow: -1px -1px 3px rgba(0,0,0,0.1), 1px 1px 1px rgba(0,0,0,0.1);
 
     color: white;
-    font: bold;
+    font-weight: bold;
+    font-size: 18px;
 
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
