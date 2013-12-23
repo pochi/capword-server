@@ -39,7 +39,9 @@ func index(response http.ResponseWriter, request *http.Request) {
 
 func create(response http.ResponseWriter, request *http.Request) {
   context := appengine.NewContext(request)
-  word := Word{Name: "ruby"}
+  context.Infof("-----------------")
+  context.Infof("Request url: %v", request.FormValue("Name"))
+  word := Word{Name: request.FormValue("Name")}
   base_key := datastore.NewKey(context, "Words", "default_words", 0, nil)
   key := datastore.NewIncompleteKey(context, "Words", base_key)
   datastore_word, error := datastore.Put(context, key, &word)
