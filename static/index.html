@@ -5,6 +5,7 @@
     <title>capword</title>
     <meta charset='UTF-8'>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-resource.min.js">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="/javascripts/capword.js"></script>
@@ -39,20 +40,10 @@
     <div class="row-fluid">
       <div class="span3">
         <ul>
-          <li class='word-form'>scheme</li>
-          <li class='word-form'>dog</li>
-          <li class='word-form'>aaa</li>
-          <li class='word-form'>bbb</li>
+          <li class='word-form' ng-repeat="word in words">{{word.Name}}</li>
         </ul>
       </div>
-      <div class="span3">
-        <ul>
-          <li class='word-form'>scheme</li>
-          <li class='word-form'>dog</li>
-          <li class='word-form'>aaa</li>
-          <li class='word-form'>bbb</li>
-        </ul>
-      </div>
+
     </div>
 
 
